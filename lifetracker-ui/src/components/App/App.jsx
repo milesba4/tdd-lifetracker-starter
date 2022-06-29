@@ -9,6 +9,7 @@ export default function App() {
          <main>
          <Navbar />
         <Routes>
+        <Route path="/" element={<Landing/>}/> 
         <Route/>
         <Route/>
         <Route/>
