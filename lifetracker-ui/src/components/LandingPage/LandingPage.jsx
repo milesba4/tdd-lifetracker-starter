@@ -11,6 +11,10 @@ export default function LandingPage({}) {
             alt="hero img"
           ></img>
         </div>
+        <div className="cta">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+          porro ex. Dolorem et veniam autem sequi labore est dolore rerum.
+        </div>
       </div>
     </div>
   );
