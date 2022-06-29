@@ -9,6 +9,5 @@ export default function LoginPage({isLoggedIn, setIsLoggedIn}){
         </div>
 
 
-
     
 )}
