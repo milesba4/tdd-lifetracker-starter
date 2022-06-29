@@ -4,11 +4,8 @@ import "./LoginPage.css";
 
 export default function LoginPage({isLoggedIn, setIsLoggedIn}){
     return(
-        <div className="login-page">
-        <LoginForm/>
-
-
-
+        <div className = "login-page">
+        {isLoggedIn? null :(<LoginForm/>)}
         </div>
 
 
