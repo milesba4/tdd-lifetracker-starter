@@ -28,3 +28,12 @@ export default function LoginForm({}) {
           </div>
           <button className="submit-login" onClick = {()=>{handleLoggedIn()}}>Login</button>
         </div>
+        <div class="footer">
+          <p>
+            Don't have an account? Sign up <Link to ="/register">here.</Link> 
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
