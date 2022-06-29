@@ -3,12 +3,12 @@ import "./RegistrationPage.css";
 
 export default function RegistrationPage({}) {
   return (
-    <div class="Register">
-      <div class="card">
+    <div className="Register">
+      <div className="card">
         <h2>Register</h2>
         <br></br>
-        <div class="registration-form">
-          <div class="form-input">
+        <div className="registration-form">
+          <div className="form-input">
             <label for="email">Email</label>
             <input
               type="email"
@@ -17,7 +17,7 @@ export default function RegistrationPage({}) {
               value=""
             ></input>
           </div>
-          <div class="form-input">
+          <div className="form-input">
             <label for="username">Username</label>
             <input
               type="text"
@@ -26,8 +26,8 @@ export default function RegistrationPage({}) {
               value=""
             ></input>
           </div>
-          <div class="split-form-input">
-            <div class="form-input">
+          <div className="split-form-input">
+            <div className="form-input">
               <input
                 type="text"
                 name="firstName"
@@ -35,7 +35,7 @@ export default function RegistrationPage({}) {
                 value=""
               ></input>
             </div>
-            <div class="form-input">
+            <div className="form-input">
               <input
                 type="text"
                 name="lastName"
@@ -44,7 +44,7 @@ export default function RegistrationPage({}) {
               ></input>
             </div>
           </div>
-          <div class="form-input">
+          <div className="form-input">
             <label for="password">Password</label>
             <input
               type="password"
@@ -53,7 +53,7 @@ export default function RegistrationPage({}) {
               value=""
             ></input>
           </div>
-          <div class="form-input">
+          <div className="form-input">
             <label for="passwordConfirm">Confirm Password</label>
             <input
               type="password"
@@ -62,11 +62,11 @@ export default function RegistrationPage({}) {
               value=""
             ></input>
           </div>
-          <button class="submit-registration" style="">
+          <button className="submit-registration" style="">
             Create Account
           </button>
         </div>
-        <div class="footer">
+        <div className="footer">
           <p>
             Already have an account? Login <a href="/login">here</a>
           </p>
