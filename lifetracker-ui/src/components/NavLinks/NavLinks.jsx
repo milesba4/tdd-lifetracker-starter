@@ -6,20 +6,20 @@ export default function NavLinks() {
         <div className="nav-links">
         <ul className="links">
         <li>
-        <Link to="/activity"/>
+        <Link to="/activity"></Link>
         Activity
         </li>
         <li>
-        <Link to="/exercise"/> Exercise
+        <Link to="/exercise"> Exercise </Link>
         </li>
         <li>
-        <Link to="/nutrition"/> Nutrition
+        <Link to="/nutrition"> Nutrition</Link>
         </li>
         <li>
-        <Link to="/sleep"/> Sleep
+        <Link to="/sleep"> Sleep</Link>
         </li>
         <li>
-        <Link to="/login"/> Login
+        <Link to="/login"> Login </Link>
         </li>
         <li className="btn secondary">
           <a href="/register">Sign Up</a>

@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "components/Navbar/Navbar";
 import LandingPage from "components/LandingPage/LandingPage";
+import LoginPage from "components/LoginPage/LoginPage";
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
 
