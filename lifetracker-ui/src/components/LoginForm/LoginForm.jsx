@@ -27,4 +27,5 @@ export default function LoginForm({}) {
             ></input>
           </div>
           <button class="btn" onClick = {()=>{handleLoggedIn()}}>Login</button>
+          <button className="submit-login" onClick = {()=>{handleLoggedIn()}}>Login</button>
         </div>
