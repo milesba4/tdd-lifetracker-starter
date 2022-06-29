@@ -24,7 +24,7 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/login" element={<LoginPage isLoggedIn = {isLoggedIn} handleLoggedIn={handleLoggedIn}/>} />
-                <Route path="/register" element={<RegistrationPage />} />
+                <Route path="/register" element={<RegistrationPage isLoggedIn = {isLoggedIn}/>} />
                 {/* <Route path="/activity" element={<ActivityPage />} />
                 <Route path="/nutrition/*" element={<NutritionPage/>}/> */}
               </Routes>

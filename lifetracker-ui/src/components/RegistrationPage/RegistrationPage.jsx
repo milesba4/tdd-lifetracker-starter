@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./RegistrationPage.css";
 import RegistrationForm from "components/RegistrationForm/RegistrationForm";
-export default function RegistrationPage({}) {
+export default function RegistrationPage({isLoggedIn}) {
   return (
     <div className="Register">
       
