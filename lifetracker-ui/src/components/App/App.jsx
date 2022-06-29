@@ -7,7 +7,7 @@ export default function App() {
       <React.Fragment>{
        <BrowserRouter>
          <main>
-
+         <Navbar />
 
 
 

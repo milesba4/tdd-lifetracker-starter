@@ -109,7 +109,7 @@ The components in the `App.jsx` file should render the following components (alo
   - [ ] **`App.jsx`**
     - [x] Should be wrapped by an element with the `className` of `app`
     - [x] The core App component that contains the routes for the app wrapped in Context providers
-    - [ ] Renders the `Navbar` component on every route
+    - [x] Renders the `Navbar` component on every route
     - [ ] Renders a `BrowserRouter` component that contains a `Routes` component with the following routes:
       - [ ] `/` - Should render the `Landing.jsx` component
       - [ ] `/login` - Should render the `LoginPage.jsx` component
