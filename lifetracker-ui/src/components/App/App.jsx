@@ -8,10 +8,12 @@ export default function App() {
        <BrowserRouter>
          <main>
          <Navbar />
+        <Routes>
+        <Route/>
+        <Route/>
+        <Route/>
 
-
-
-
+        </Routes>
          </main>
        </BrowserRouter> 
         }</React.Fragment>
