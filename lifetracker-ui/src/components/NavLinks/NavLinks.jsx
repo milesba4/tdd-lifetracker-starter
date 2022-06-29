@@ -21,7 +21,7 @@ export default function NavLinks() {
         <Link to="/login"> Login </Link>
         </li>
         <li className="btn secondary">
-          <a href="/register">Sign Up</a>
+          <Link to="/register">Sign Up </Link>
         </li>
       </ul>
     </div>
