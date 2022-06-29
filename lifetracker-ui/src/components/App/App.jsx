@@ -11,7 +11,7 @@ export default function App() {
             <main>
               <Navbar />
               <Routes>
-                {/* <Route path="/" element={<Landing />} />
+                {/* <Route path="/" element={<LandingPage />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegistrationPage />} />
                 <Route path="/activity" element={<ActivityPage />} />
