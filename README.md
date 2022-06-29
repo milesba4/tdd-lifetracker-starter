@@ -200,10 +200,10 @@ The components in the `App.jsx` file should render the following components (alo
       - [x] `email`
       - [x] `password`
     - [x] Each `input` element in the form should have a `className` of `form-input` and should have the following props set:
-      - [ ] `name` - the `name` of the `input` field being rendered (`email`, `password`)
-      - [ ] `type` - the type of the `input` element (`text`, `email`, `number`, etc)
-      - [ ] `value` - the current value of the `input` element
-      - [ ] `onChange` - the `onChange` handler function
+      - [x] `name` - the `name` of the `input` field being rendered (`email`, `password`)
+      - [x] `type` - the type of the `input` element (`text`, `email`, `number`, etc)
+      - [] `value` - the current value of the `input` element
+      - [] `onChange` - the `onChange` handler function
     - [ ] The component should validate the `email` field:
       - [ ] If the user has entered text into the `email` field and it doesn't contain an `@` symbol, then an error message should be displayed in an element with the `className` of `error` indicating that the entry is not a valid email.
     - [ ] The component should gracefully handle errors:
