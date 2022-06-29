@@ -5,7 +5,13 @@ import Navbar from "components/Navbar/Navbar";
 import LandingPage from "components/LandingPage/LandingPage";
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
-  
+
+
+
+  function handleLoggedIn(evt){
+    setIsLoggedIn(true)
+  }
+
   return (
     <div className="app">
       <React.Fragment>
