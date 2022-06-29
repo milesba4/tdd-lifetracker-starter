@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "components/Navbar/Navbar";
 import LandingPage from "components/LandingPage/LandingPage";
 export default function App() {
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+  
   return (
     <div className="app">
       <React.Fragment>
