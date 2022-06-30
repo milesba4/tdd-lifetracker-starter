@@ -26,7 +26,7 @@ export default function App() {
               <Navbar />
               <Routes>
                 <Route path="/" element={<LandingPage />} />
-                <Route path="/login" element={<LoginPage isLoggedIn = {isLoggedIn} handleLoggedIn={handleLoggedIn}/>} />
+                <Route path="/login" element={<LoginPage loginForm = {loginForm} setLoginForm = {setLoginForm} isLoggedIn = {isLoggedIn} handleLoggedIn={handleLoggedIn}/>} />
                 <Route path="/register" element={<RegistrationPage registrationForm={registrationForm} setRegistrationForm={setRegistrationForm} isLoggedIn = {isLoggedIn}/>} />
                 {/* <Route path="/activity" element={<ActivityPage />} />
                 <Route path="/nutrition/*" element={<NutritionPage/>}/> */}

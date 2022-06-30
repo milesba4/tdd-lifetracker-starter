@@ -3,7 +3,7 @@ import {Link } from "react-router-dom";
 
 import "./LoginForm.css";
 
-export default function LoginForm({}) {
+export default function LoginForm({loginForm, setLoginForm}) {
   return (
     <div class="Login">
       <div class="card">
