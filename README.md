@@ -217,6 +217,7 @@ The components in the `App.jsx` file should render the following components (alo
 
     - [x] Should render JSX that is wrapped by an element with the `className` of `login-page`
     - [ ] Using either a custom hook, context, or manually set state, this component should check to see if a user is already logged in
+    - [x] Using either a custom hook, context, or manually set state, this component should check to see if a user is already logged in
       - [ ] If the user is already logged in, it should redirect them to the `/activity` page
       - [x] If no user is authenticated, it should render the `LoginForm.jsx` component and pass it any props it needs
 
