@@ -7,6 +7,7 @@ import LoginPage from "components/LoginPage/LoginPage";
 import RegistrationPage from "components/RegistrationPage/RegistrationPage";
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+  const[loginForm,setLoginForm] = React.useState({email:"",password:""})
   const[registrationForm, setRegistrationForm]=React.useState({email:"",username:"",firstName:"", lastName:"",password:"", passwordConfirm:""})
 
 
