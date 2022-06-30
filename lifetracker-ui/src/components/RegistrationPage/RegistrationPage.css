@@ -1,0 +1,36 @@
+.registration-page, .registration-page .card {
+    display: flex;
+    align-items: center;
+}
+.registration-page {
+    min-height: calc(100vh - 100px);
+    height: 100%;
+    max-height: calc(100vh - 100px);
+    width: 100%;
+    max-width: 100vw;
+    background: #2c4147;
+    justify-content: center;
+}
+
+.registration-page .card {
+    min-height: 600px;
+    width: 520px;
+    padding: 24px 36px 0;
+    flex-direction: column;
+}
+
+.registration-page .card h2 {
+    font-size: 42px;
+    margin-bottom: 4px;
+    font-weight: 600;
+    color: white;
+}
+
+.registration-page .card .registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-bottom: 10px;
+    color: white;
+}
