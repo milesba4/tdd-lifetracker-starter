@@ -1,10 +1,8 @@
-require("dotenv").config()
-require("colors")
+// require("dotenv").config()
+// require("colors")
 
-const PORT = process.env.PORT ? Number(process.env.PORT): 3001
-
-
-
+// const PORT = process.env.PORT ? Number(process.env.PORT): 3001
+// const NODE_ENV = process.env.NODE_ENV ? process.env.NODE_ENV : "test"
 
 
 
@@ -18,4 +16,7 @@ const PORT = process.env.PORT ? Number(process.env.PORT): 3001
 
 
 
-module.exports = PORT
+
+
+// module.exports = {PORT, NODE_ENV
+// }
