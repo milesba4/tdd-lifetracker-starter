@@ -3,7 +3,7 @@ import {Link } from "react-router-dom";
 
 import "./LoginForm.css";
 
-export default function LoginForm({loginForm, setLoginForm}) {
+export default function LoginForm({loginForm, setLoginForm, handleLoggedIn}) {
   console.log("loginForm=",loginForm)
   function handleOnLoginChange(evt){
     setLoginForm((f) => ({...f, [evt.target.name]: evt.target.value}))
@@ -23,7 +23,7 @@ export default function LoginForm({loginForm, setLoginForm}) {
               name="email"
               placeholder="user@gmail.com"
               value={loginForm.email}
-              onChange={handleOnLoginChange()}
+              onChange={handleOnLoginChange}
             ></input>
           </div>
           <div class="form-input">
@@ -33,7 +33,7 @@ export default function LoginForm({loginForm, setLoginForm}) {
               name="password"
               placeholder="password"
               value={loginForm.password}
-              onChange = {handleOnLoginChange()}
+              onChange = {handleOnLoginChange}
             ></input>
           </div>
           <button className="submit-login" onClick = {()=>{handleLoggedIn()}}>Login</button>
