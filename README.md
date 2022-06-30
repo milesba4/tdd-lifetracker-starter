@@ -457,9 +457,9 @@ Here are the pieces of functionality that should be built out for the backend:
     - [x] `DATABASE_PORT`
     - [x] `DATABASE_NAME` - (set to `lifetracker`)
     - [x] `DATABASE_TEST_NAME` - (set to `lifetracker_test`)
-  - [x] Add a c`onfig.test.js` file
+  - [x] Add a `config.test.js` file
     - [ ] Write tests that check to make sure that:
-      - [ ] `process.env.NODE_ENV` is set to `test` when the test suite is run
+      - [x] `process.env.NODE_ENV` is set to `test` when the test suite is run
       - [ ] There is an `IS_TESTING` variable that is exported, which should only be true if `process.env.NODE_ENV` is set to `test`
     - [ ] Write tests to ensure that certain environment variables are exported from the `config.js` file and can be imported:
       - [ ] `PORT`
@@ -517,9 +517,9 @@ Here are the pieces of functionality that should be built out for the backend:
   - [ ] A database client is now ready to be used!
 - **Server**
   - [x] Build out a bare-bones Express server with a healthcheck route and an adequate middleware pipeline.
-  - [ ] Create a `utils` directory
-    - [ ] In the `utils` directory, create an `errors.js` file.
-    - [ ] Create error classes inside the file that will be used throughout the app.
+  - [x] Create a `utils` directory
+    - [x] In the `utils` directory, create an `errors.js` file.
+    - [x] Create error classes inside the file that will be used throughout the app.
   - [ ] In the `app.test.js` file, write tests that:
     - [ ] Ensure that the Express application responds to `GET` requests to the `/` route with a JSON object of `{ "ping": "pong" }`
     - [ ] Check that middleware like `morgan` and `cors` exist, along with the JSON `body-parser` middleware from `express`
