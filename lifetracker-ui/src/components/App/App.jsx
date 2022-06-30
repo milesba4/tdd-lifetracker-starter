@@ -7,12 +7,14 @@ import LoginPage from "components/LoginPage/LoginPage";
 import RegistrationPage from "components/RegistrationPage/RegistrationPage";
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
-
+  const[registrationForm, setRegistrationForm]=React.useState({email:"",username:"",firstName:"", lastName:"",password:"", passwordConfirm:""})
 
 
   function handleLoggedIn(evt){
     setIsLoggedIn(true)
   }
+  
+ 
 
   return (
     <div className="app">
@@ -24,7 +26,7 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/login" element={<LoginPage isLoggedIn = {isLoggedIn} handleLoggedIn={handleLoggedIn}/>} />
-                <Route path="/register" element={<RegistrationPage isLoggedIn = {isLoggedIn}/>} />
+                <Route path="/register" element={<RegistrationPage registrationForm={registrationForm} setRegistrationForm={setRegistrationForm} isLoggedIn = {isLoggedIn}/>} />
                 {/* <Route path="/activity" element={<ActivityPage />} />
                 <Route path="/nutrition/*" element={<NutritionPage/>}/> */}
               </Routes>

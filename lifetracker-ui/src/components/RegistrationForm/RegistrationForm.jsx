@@ -2,6 +2,7 @@ import * as React from "react";
 import "./RegistrationForm.css";
 
 export default function RegistrationForm({}) {
+export default function RegistrationForm({registrationForm,setRegistrationForm}) {
   return (
     <div className="card">
       <h2>Register</h2>
