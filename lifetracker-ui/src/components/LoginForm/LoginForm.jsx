@@ -36,7 +36,7 @@ export default function LoginForm({loginForm, setLoginForm, handleLoggedIn}) {
               onChange = {handleOnLoginChange}
             ></input>
           </div>
-          <button className="submit-login" onClick = {()=>{handleLoggedIn()}}>Login</button>
+          <button className="submit-login" onClick = {()=>{handleLoggedIn}}>Login</button>
         </div>
         <div class="footer">
           <p>
