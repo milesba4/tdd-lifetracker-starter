@@ -29,5 +29,7 @@ app.get('/', (req, res) => {
   })
 
 
-
+  afterAll(() => {
+    await db.end()
+  })
   module.exports=app // exporting app as default
