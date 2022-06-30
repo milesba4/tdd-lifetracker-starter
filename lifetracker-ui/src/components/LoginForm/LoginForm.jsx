@@ -4,6 +4,10 @@ import {Link } from "react-router-dom";
 import "./LoginForm.css";
 
 export default function LoginForm({loginForm, setLoginForm}) {
+  function handleOnLoginChange(evt){
+    setLoginForm((f) => ({...f, [evt.target.name]: evt.target.value}))
+  }
+
   return (
     <div class="Login">
       <div class="card">
@@ -16,7 +20,8 @@ export default function LoginForm({loginForm, setLoginForm}) {
               type="email"
               name="email"
               placeholder="user@gmail.com"
-              value=""
+              value={loginForm.email}
+              onChange={handleOnLoginChange()}
             ></input>
           </div>
           <div class="form-input">
@@ -25,7 +30,8 @@ export default function LoginForm({loginForm, setLoginForm}) {
               type="password"
               name="password"
               placeholder="password"
-              value=""
+              value={loginForm.password}
+              onChange = {handleOnLoginChange()}
             ></input>
           </div>
           <button className="submit-login" onClick = {()=>{handleLoggedIn()}}>Login</button>
