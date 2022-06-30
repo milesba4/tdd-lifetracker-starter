@@ -165,10 +165,10 @@ The components in the `App.jsx` file should render the following components (alo
     - [ ] Create and export a `useAuthContext` hook that calls the `React.useContext` hook with the newly created `AuthContext` and returns it.
     - [ ] In `App.jsx` file create an `AppContainer` component that wraps the `App` component with the `AuthContextProvider` component (which should still be nested inside the `BrowserRouter` component from `react-router-dom`). Export the `AppContainer` component by default instead of the `App`
 
-  - [ ] The **`Loading.jsx`** component
+  - [x] The **`Loading.jsx`** component
 
-    - [ ] Should render JSX that is wrapped by an element with the `className` of `loading`
-    - [ ] Should render an element with the `className` of `loading-message` that contains the text `"Loading"`
+    - [x] Should render JSX that is wrapped by an element with the `className` of `loading`
+    - [x] Should render an element with the `className` of `loading-message` that contains the text `"Loading"`
 
   - [ ] The **`Navbar.jsx`** component
 
