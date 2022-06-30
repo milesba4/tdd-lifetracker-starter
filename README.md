@@ -516,7 +516,7 @@ Here are the pieces of functionality that should be built out for the backend:
   - [ ] Commit all work to `git`
   - [ ] A database client is now ready to be used!
 - **Server**
-  - [ ] Build out a bare-bones Express server with a healthcheck route and an adequate middleware pipeline.
+  - [x] Build out a bare-bones Express server with a healthcheck route and an adequate middleware pipeline.
   - [ ] Create a `utils` directory
     - [ ] In the `utils` directory, create an `errors.js` file.
     - [ ] Create error classes inside the file that will be used throughout the app.
