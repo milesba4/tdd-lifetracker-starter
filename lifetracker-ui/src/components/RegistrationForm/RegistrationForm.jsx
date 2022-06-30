@@ -1,8 +1,13 @@
 import * as React from "react";
 import "./RegistrationForm.css";
 
-export default function RegistrationForm({}) {
 export default function RegistrationForm({registrationForm,setRegistrationForm}) {
+
+
+  function handleOnRegistrationChange(evt){
+    setRegistrationForm((f) => ({...f, [evt.target.name]: evt.target.value}))
+  }
+
   return (
     <div className="card">
       <h2>Register</h2>
@@ -14,7 +19,8 @@ export default function RegistrationForm({registrationForm,setRegistrationForm})
             type="email"
             name="email"
             placeholder="Enter a valid email"
-            value=""
+            value= {registrationForm.email}
+            onChange ={handleOnRegistrationChange()} 
           ></input>
         </div>
         <div className="form-input">
@@ -23,7 +29,8 @@ export default function RegistrationForm({registrationForm,setRegistrationForm})
             type="text"
             name="username"
             placeholder="your_username"
-            value=""
+            value={registrationForm.username}
+            onChange ={handleOnRegistrationChange()} 
           ></input>
         </div>
         <div className="split-form-input">
@@ -32,7 +39,8 @@ export default function RegistrationForm({registrationForm,setRegistrationForm})
               type="text"
               name="firstName"
               placeholder="First Name"
-              value=""
+              value={registrationForm.firstName}
+              onChange ={handleOnRegistrationChange()} 
             ></input>
           </div>
           <div className="form-input">
@@ -40,7 +48,8 @@ export default function RegistrationForm({registrationForm,setRegistrationForm})
               type="text"
               name="lastName"
               placeholder="Last Name"
-              value=""
+              value={registrationForm.lastName}
+              onChange ={handleOnRegistrationChange()}
             ></input>
           </div>
         </div>
@@ -50,7 +59,8 @@ export default function RegistrationForm({registrationForm,setRegistrationForm})
             type="password"
             name="password"
             placeholder="Enter a secure password"
-            value=""
+            value={registrationForm.password}
+            onChange ={handleOnRegistrationChange()}
           ></input>
         </div>
         <div className="form-input">
@@ -59,7 +69,8 @@ export default function RegistrationForm({registrationForm,setRegistrationForm})
             type="password"
             name="passwordConfirm"
             placeholder="Confirm your password"
-            value=""
+            value={registrationForm.passwordConfirm}
+            onChange ={handleOnRegistrationChange()}
           ></input>
         </div>
         <button className="submit-registration">
