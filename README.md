@@ -520,8 +520,8 @@ Here are the pieces of functionality that should be built out for the backend:
   - [x] Create a `utils` directory
     - [x] In the `utils` directory, create an `errors.js` file.
     - [x] Create error classes inside the file that will be used throughout the app.
-  - [ ] In the `app.test.js` file, write tests that:
-    - [ ] Ensure that the Express application responds to `GET` requests to the `/` route with a JSON object of `{ "ping": "pong" }`
+  - [x] In the `app.test.js` file, write tests that:
+    - [x] Ensure that the Express application responds to `GET` requests to the `/` route with a JSON object of `{ "ping": "pong" }`
     - [ ] Check that middleware like `morgan` and `cors` exist, along with the JSON `body-parser` middleware from `express`
     - [ ] Include an `afterAll` hook that calls `await db.end()` so that any open database connections close when all the tests are finished.
   - [ ] Add code to the `app.js` and `server.js` file to get a simple server running along with responding to `GET` requests to the `/` route
