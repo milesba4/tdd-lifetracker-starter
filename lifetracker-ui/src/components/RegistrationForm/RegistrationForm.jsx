@@ -5,7 +5,9 @@ export default function RegistrationForm({registrationForm,setRegistrationForm})
 
 
   function handleOnRegistrationChange(evt){
+    console.log("RegForm=",registrationForm)
     setRegistrationForm((f) => ({...f, [evt.target.name]: evt.target.value}))
+    console.log("RegFormAfter=",registrationForm)
   }
 
   return (

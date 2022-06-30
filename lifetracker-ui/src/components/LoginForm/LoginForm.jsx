@@ -4,8 +4,10 @@ import {Link } from "react-router-dom";
 import "./LoginForm.css";
 
 export default function LoginForm({loginForm, setLoginForm}) {
+  console.log("loginForm=",loginForm)
   function handleOnLoginChange(evt){
     setLoginForm((f) => ({...f, [evt.target.name]: evt.target.value}))
+    console.log("loginFormAfter=",loginForm)
   }
 
   return (
