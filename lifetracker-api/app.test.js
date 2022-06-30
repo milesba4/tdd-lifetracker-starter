@@ -1,19 +1,19 @@
-const express = require("express")
-const app = express()
-const morgan = require("morgan")
-// const{NotFoundError}= require("./utils/errors")
-// const storeRouter = require("./routes/store")
-// app.use("/store", storeRouter);
+// const express = require("express")
+// const app = express()
+// const morgan = require("morgan")
+// // const{NotFoundError}= require("./utils/errors")
+// // const storeRouter = require("./routes/store")
+// // app.use("/store", storeRouter);
 
-app.use(morgan("tiny"))
-app.use(express.json())
-
-
-
-app.get('/', (req, res) => {
-    res.status(200).send({ping:"pong"})
-  })
+// app.use(morgan("tiny"))
+// app.use(express.json())
 
 
 
-  module.exports=app // exporting app as default
+// app.get('/', (req, res) => {
+//     res.status(200).send({ping:"pong"})
+//   })
+
+
+
+//   module.exports=app // exporting app as default
