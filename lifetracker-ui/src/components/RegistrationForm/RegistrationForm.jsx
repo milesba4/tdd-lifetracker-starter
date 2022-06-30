@@ -61,7 +61,7 @@ export default function RegistrationForm({}) {
             value=""
           ></input>
         </div>
-        <button className="submit-registration" style="">
+        <button className="submit-registration">
           Create Account
         </button>
       </div>
