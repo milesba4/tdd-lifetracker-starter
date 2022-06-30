@@ -445,7 +445,7 @@ Here are the pieces of functionality that should be built out for the backend:
   - [x] Create a `.gitignore` file, an `app.js` file, an `app.test.js` file, and a `server.js` file
   - [x] Make sure `node_modules` are added to the `.gitignore` file.
   - [x] Add dependencies for `express@next`, `morgan`, `cors`, and `nodemon`
-  - [ ] Install new dependencies for `bcrypt`, `jsonwebtoken`, `colors`, `dotenv`, `pg`
+  - [x] Install new dependencies for `bcrypt`, `jsonwebtoken`, `colors`, `dotenv`, `pg`
   - [ ] Commit all work to `git`
   - [ ] Add a `.env` file to the root of the repo and include the following environment variables
     - [ ] `PORT` (default to `3001`)
