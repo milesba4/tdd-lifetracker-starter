@@ -443,7 +443,7 @@ Here are the pieces of functionality that should be built out for the backend:
 - **Project setup**
   - [x] First things first, bootstrap the Express application with some essential files and starter code
   - [x] Create a `.gitignore` file, an `app.js` file, an `app.test.js` file, and a `server.js` file
-  - [ ] Make sure `node_modules` are added to the `.gitignore` file.
+  - [x] Make sure `node_modules` are added to the `.gitignore` file.
   - [ ] Add dependencies for `express@next`, `morgan`, `cors`, and `nodemon`
   - [ ] Install new dependencies for `bcrypt`, `jsonwebtoken`, `colors`, `dotenv`, `pg`
   - [ ] Commit all work to `git`
