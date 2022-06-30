@@ -465,7 +465,7 @@ Here are the pieces of functionality that should be built out for the backend:
       - [ ] `PORT`
       - [ ] `SECRET_KEY`
       - [ ] `BCRYPT_WORK_FACTOR`
-      - [ ] `IS_TESTING`
+      - [x] `IS_TESTING`
     - [ ] Write tests to ensure that a `getDatabaseUri` function is exported from the `config.js` file
       - [ ] The `getDatabaseUri` function should:
         - [ ] Check to see if a valid `process.env.DATABASE_URL` environment variable exists, and return that if it does.
