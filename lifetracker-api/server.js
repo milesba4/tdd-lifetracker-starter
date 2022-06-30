@@ -2,14 +2,9 @@ express = require("express")
 const cors = require("cors")
 const morgan = require("morgan")
 const app = require("./app.test")
-
-
-
-
-
+const PORT = process.env.PORT || 3001
 app.use(cors())
 
-const PORT = process.env.PORT || 3001
 //parse incoming request bodies with JSON payload
 app.use(express.json())
 
