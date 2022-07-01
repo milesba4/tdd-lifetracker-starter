@@ -48,16 +48,18 @@ class User {
             throw new BadRequestError("Invalid email")
         }
         console.log("check",credentials)
+        console.log("username=", credentials.username)
         // Make sure user doesnt already exist in the system 
         // if one does, throw an error
-        
+        console.log("em",credentials.email)
         const existingUser = await User.fetchUserByEmail(credentials.email)
         if(existingUser){
             throw new BadRequestError(`Duplicate email: ${credentials.email}`)
         }
-        console.log("exist=",existingUser)
+    
 
         const existingUsername = await User.fetchUserByUsername(credentials.username)
+        console.log("exist=",existingUsername)
         if(existingUsername){
             throw new BadRequestError(`Duplicate username: ${credentials.username}`)
         }
