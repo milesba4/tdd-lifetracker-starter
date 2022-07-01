@@ -8,7 +8,7 @@ CREATE TABLE users(
     email    TEXT NOT NULL UNIQUE CHECK (POSITION('@' IN email) > 1),
     created_at  TIMESTAMP DEFAULT NOW (),
     updated_at TIMESTAMP DEFAULT NOW()
-)
+);
 
 CREATE TABLE nutrition(
     id      SERIAL PRIMARY KEY, 
@@ -16,6 +16,7 @@ CREATE TABLE nutrition(
     category    TEXT NOT NULL,
     calories INTEGER NOT NULL,
     image_url TEXT NOT NULL,
+    user_id INTEGER NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id),
     created_at  TIMESTAMP DEFAULT NOW ()
 )
