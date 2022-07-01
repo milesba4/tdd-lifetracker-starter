@@ -501,11 +501,11 @@ Here are the pieces of functionality that should be built out for the backend:
           - [x] `user_id`
           - [x] `created_at`
         - [ ] **Any other tables** that the application might depend on
-    - [ ] `lifetracker.sql`
-      - [ ] This script should:
-        - [ ] 1. Let the user know that they're about to delete the `lifetracker` db and prompt them to confirm that is what they want.
-        - [ ] 2. Drop the `lifetracker` database and then create a new `lifetracker` database, before connecting to the `lifetracker` database.
-        - [ ] 3. It should then run the `lifetracker-schema.sql` file.
+    - [x] `lifetracker.sql`
+      - [x] This script should:
+        - [x] 1. Let the user know that they're about to delete the `lifetracker` db and prompt them to confirm that is what they want.
+        - [x] 2. Drop the `lifetracker` database and then create a new `lifetracker` database, before connecting to the `lifetracker` database.
+        - [x] 3. It should then run the `lifetracker-schema.sql` file.
         - [ ] Follow the exact same steps for `1`, `2`, and `3`, but with the `lifetracker_test` database.
   - [ ] Setup the database by running `psql -f lifetracker.sql`
   - [ ] Create a new file at the root of the project called `db.js`. In that file:
