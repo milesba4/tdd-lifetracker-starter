@@ -9,30 +9,22 @@ app.use(cors())
 app.use(morgan("tiny"))
 app.use(express.json())
 
-    // app.use((req,res,next)=>{
-    //     return next(new NotFoundError())
-    //     })
-    
-    app.use((err,req,res,next)=>{  // generic error handler
-      const status = err.status || 500
-      const message = err.message
-    
-      return res.status(status).json({
-      error:{message,status}
-      })
-    })
 
 
 app.use("/auth", authRoutes)
 
 
+app.use((req, res, next) => {
+    next(new NotFoundError())
+})
 
-app.get('/', (req, res) => {
-    res.status(200).send({ping:"pong"})
-  })
+app.use((err, req, res, next) => {
+    const status = err.status || 500
+    const message = err.message
 
+    return res.status(status).json({
+        error: { message, status },
+    })
+})
 
-  // afterAll(() => {
-  //   await db.end()
-  // })
-  module.exports=app // exporting app as default
+module.exports = app
