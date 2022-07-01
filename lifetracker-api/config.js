@@ -14,12 +14,13 @@ const dbUser = process.env.DATABASE_USER || "postgres"
 const dbPass = process.env.DATABASE_PASS ? encodeURI(process.env.DATABASE_PASS): "postgres" // ask about password
 const dbHost = process.env.DATABASE_HOST || "localhost"
 const dbPort = process.env.DATABASE_PORT || 5432
-
-if(IS_TESTING){
 const dbName = process.env.DATABASE_NAME || "lifetracker"
-}else{
-dbName = process.env.DATABASE_TEST_NAME || "lifetracker_test"
-}
+
+// if(IS_TESTING){
+// const dbName = process.env.DATABASE_NAME || "lifetracker"
+// }else{
+// dbName = process.env.DATABASE_TEST_NAME || "lifetracker_test"
+// }
 
 // if the DATABASE_URL environment variable exists, use that
 //else create the dbconnection string ourselves
