@@ -555,7 +555,7 @@ Here are the pieces of functionality that should be built out for the backend:
   - [ ] In any new test file, make sure to import these functions and use them with the correct `jest` lifecycle hooks
 - **Authentication**
   - [ ] Go ahead and build out a full-fledged authentication flow using PostgreSQL, `bcrypt`, and JSON Web Tokens. For it all to work, we'll need a `User` model, a `security` middleware, some `tokens` utility functions, and the appropriate `auth` routes.
-  - [ ] Add new directories for `models`, `routes`, and `middleware`
+  - [x] Add new directories for `models`, `routes`, and `middleware`
   - [ ] The **User** model
     - [ ] In the `models` directory, create two new files: `models/user.js` and `models/user.test.js`
       - [ ] The `User` model should have **at least** the following static methods:
