@@ -13,6 +13,9 @@ app.use(express.json())
 
 app.use("/auth", authRoutes)
 
+app.get("/",(req, res, next) => {
+    res.status(200).json({"ping":"pong"})
+})
 
 app.use((req, res, next) => {
     next(new NotFoundError())
