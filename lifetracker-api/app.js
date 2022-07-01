@@ -23,6 +23,7 @@ app.use(express.json())
     })
 
 
+app.use("/auth", authRoutes)
 
 
 
