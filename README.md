@@ -360,9 +360,9 @@ The components in the `App.jsx` file should render the following components (alo
 
   - [ ] The **`NutritionFeed.jsx`** component:
 
-    - [ ] Should render JSX that is wrapped by an element with the `className` of `nutrition-feed`
-    - [ ] It should receive **at least** the following props:
-      - [ ] `nutritions` - an array of `nutrition` items
+    - [x] Should render JSX that is wrapped by an element with the `className` of `nutrition-feed`
+    - [x] It should receive **at least** the following props:
+      - [x] `nutritions` - an array of `nutrition` items
     - [ ] If the `nutritions` array has no items in it, it should render an empty message that says `Nothing here yet` inside an element with the `className` of `empty-message`
     - [ ] If the `nutritions` array does have items in it:
       - [ ] For each item in the `nutritions` array, it should render a `NutritionCard.jsx` component
