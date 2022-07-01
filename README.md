@@ -805,3 +805,24 @@ Here are the pieces of functionality that should be built out for the backend:
 ## Wrapping Up and Resources
 
 This is a huge project and represents a complete application with user-owned resources. Accordingly, it can, should, and will test the limits of your capabilities. Do your best and don't be afraid to Google! Especially in regards to any SQL that might be tricky.
+
+## Reflection 
+
+- Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
+
+Lab 1 was very resourceful in terms of learning how to make SQL queries and the syntax behind them. Lab 2 also was extremely helpful in preparing me to create SQL databases with Postgres and using it in combination with express. I felt unprepared to use tokens for authentication.
+
+- If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
+If I had more time I would make my website's css look a lot cleaner.(Will work more on it over the weekend).
+
+- Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
+
+I noticed alot of other student's CSS styling looked very clean, which is something I wish I had been able to do before demoing my project
+
+
+## Open-source libraries used
+
+## Shout out
+
+I'd like to shout out Gabrel Bremo and Lacie Covington for being great podmates.
+
