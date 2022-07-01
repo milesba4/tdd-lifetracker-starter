@@ -351,12 +351,12 @@ The components in the `App.jsx` file should render the following components (alo
 
   - [ ] The **`NutritionOverview.jsx`** component:
 
-    - [ ] Should render JSX that is wrapped by an element with the `className` of `nutrition-overview`
+    - [x] Should render JSX that is wrapped by an element with the `className` of `nutrition-overview`
     - [ ] It should call the `useNutritionContext` hook and extract all the necessary data from it.
       - [ ] If the `error` state variable has a valid string in it, it should render the `error` message inside an element with the `className` of `error`
       - [ ] If the `isLoading` boolean is `true`, it should render the `Loading.jsx` component
       - [ ] If the `isLoading` boolean is `false`, it should render the `NutritionFeed.jsx` component and pass it the appropriate props
-    - [ ] Near the top of the component, it should render a `Link` component that directs to the `/nutrition/create` route and contains the text: `"Record Nutrition"`
+    - [x] Near the top of the component, it should render a `Link` component that directs to the `/nutrition/create` route and contains the text: `"Record Nutrition"`
 
   - [ ] The **`NutritionFeed.jsx`** component:
 
