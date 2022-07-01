@@ -1,9 +1,11 @@
 const express = require("express")
-const app = express()
+const { NotFoundError} = require("./utils/errors")
+const authRoutes = require("./routes/auth")
 const morgan = require("morgan")
-const {BadRequestError, NotFoundError} = require("./utils/errors")
-// const storeRouter = require("./routes/store")
-// app.use("/store", storeRouter);
+const cors = require("cors")
+const app = express()
+app.use(cors())
+
 app.use(morgan("tiny"))
 app.use(express.json())
 
