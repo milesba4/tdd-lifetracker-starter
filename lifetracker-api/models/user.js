@@ -73,14 +73,15 @@ class User {
         const result = await db.query(
         `INSERT INTO users(
             email,
+            username,
             password,
             first_name,
             last_name,
             created_at
             )
             VALUES ($1, $2, $3, $4, $5, $6)
-            RETURNING id, email, first_name, last_name, created_at;
-        `,[lowercasedEmail, hashedPassword, credentials.first_name, credentials.last_name,credentials.created_at])
+            RETURNING id, email, username, first_name, last_name, created_at;
+        `,[lowercasedEmail,credentials.username, hashedPassword, credentials.first_name, credentials.last_name,credentials.created_at])
         
         //return user
         console.log("result =", result)
