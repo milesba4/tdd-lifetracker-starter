@@ -341,12 +341,12 @@ The components in the `App.jsx` file should render the following components (alo
 
   - [ ] The **`NutritionPage.jsx`** component:
 
-    - [ ] Should render JSX that is wrapped by an element with the `className` of `nutrition-page`
+    - [x] Should render JSX that is wrapped by an element with the `className` of `nutrition-page`
     - [ ] Should render a nested `Routes` component from `react-router-dom`.
-      - [ ] There should be multiple `Route` components:
-        - [ ] The `/nutrition` route should render the `NutritionOverview.jsx` component
-        - [ ] The `/nutrition/create` route should render the `NutritionNew.jsx` component
-        - [ ] The `/nutrition/id/:nutritionId` should render the `NutritionDetail.jsx` component
+      - [x] There should be multiple `Route` components:
+        - [x] The `/nutrition` route should render the `NutritionOverview.jsx` component
+        - [x] The `/nutrition/create` route should render the `NutritionNew.jsx` component
+        - [x] The `/nutrition/id/:nutritionId` should render the `NutritionDetail.jsx` component
         - [ ] Any other route should render the `NotFound` component
 
   - [ ] The **`NutritionOverview.jsx`** component:
