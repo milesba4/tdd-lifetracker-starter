@@ -25,5 +25,16 @@ next(err)
 }
 
 })
+router.post("/register", async(req,res,next)=>{
+    try{
+        console.log("req body=",req.body)
+        const user = await User.register(req.body)
+        return res.status(200).json({user})
+        }catch(err){
+        console.log("hello")
+        next(err)
+        }
+})
+
 module.exports = router
 
