@@ -3,7 +3,7 @@ const cors = require("cors")
 const morgan = require("morgan")
 const app = require("./app")
 const {PORT } = require("./config")
-// const {BadRequestError, NotFoundError} = require("./utils/errors")
+const {BadRequestError, NotFoundError} = require("./utils/errors")
 
 
 app.use(cors())
