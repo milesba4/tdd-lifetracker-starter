@@ -507,14 +507,14 @@ Here are the pieces of functionality that should be built out for the backend:
         - [x] 2. Drop the `lifetracker` database and then create a new `lifetracker` database, before connecting to the `lifetracker` database.
         - [x] 3. It should then run the `lifetracker-schema.sql` file.
         - [ ] Follow the exact same steps for `1`, `2`, and `3`, but with the `lifetracker_test` database.
-  - [ ] Setup the database by running `psql -f lifetracker.sql`
-  - [ ] Create a new file at the root of the project called `db.js`. In that file:
-    - [ ] Import the `getDatabaseUri` function from the `config.js` file.
-    - [ ] Initialize a new postgres client with the `pg` package and connect to PostgreSQL using any necessary config variables.
-    - [ ] Connect to postgres and log a message to the terminal on success or failure.
-    - [ ] Export the connected database client
-  - [ ] Commit all work to `git`
-  - [ ] A database client is now ready to be used!
+  - [x] Setup the database by running `psql -f lifetracker.sql`
+  - [x] Create a new file at the root of the project called `db.js`. In that file:
+    - [x] Import the `getDatabaseUri` function from the `config.js` file.
+    - [x] Initialize a new postgres client with the `pg` package and connect to PostgreSQL using any necessary config variables.
+    - [x] Connect to postgres and log a message to the terminal on success or failure.
+    - [x] Export the connected database client
+  - [x] Commit all work to `git`
+  - [x] A database client is now ready to be used!
 - **Server**
   - [x] Build out a bare-bones Express server with a healthcheck route and an adequate middleware pipeline.
   - [x] Create a `utils` directory
@@ -534,8 +534,8 @@ Here are the pieces of functionality that should be built out for the backend:
   - [x] Test out the fancy new Express server by starting it up in a new terminal window!
 - **Common Test Configuration**
   - [ ] It would probably be helpful to create some common test functions that can be used throughout the application's testing suite.
-  - [ ] Create a new directory called `tests`
-  - [ ] Now, touch a new file at `tests/common.js`
+  - [x] Create a new directory called `tests`
+  - [x] Now, touch a new file at `tests/common.js`
     - [ ] In that file:
       - [ ] Import the `db` client
       - [ ] Create and export four functions:
