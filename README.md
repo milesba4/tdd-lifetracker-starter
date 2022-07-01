@@ -297,8 +297,8 @@ The components in the `App.jsx` file should render the following components (alo
       - [x] `avgCaloriesPerCategory` - an array of items containing summary data about the average calories consumed per category
       - [ ] Any other
     - [x] Inside an element with the `className` of `per-category`, it should:
-      - [ ] Render the text: `"Average Calories Per Category` inside an `h4` element
-      - [ ] Take the first `6` or less items in the `avgCaloriesPerCategory` array and render a `SummaryStat.jsx` component for each item.
+      - [x] Render the text: `"Average Calories Per Category` inside an `h4` element
+      - [x] Take the first `6` or less items in the `avgCaloriesPerCategory` array and render a `SummaryStat.jsx` component for each item.
         - [ ] It should pass the calories **rounded down to one decimal place** as the `stat` prop
         - [ ] It should pass the string of `calories` as the `label` prop
         - [ ] It should pass the `category` as the `substat` prop
