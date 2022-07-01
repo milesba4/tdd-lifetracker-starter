@@ -302,9 +302,9 @@ The components in the `App.jsx` file should render the following components (alo
         - [ ] It should pass the calories **rounded down to one decimal place** as the `stat` prop
         - [ ] It should pass the string of `calories` as the `label` prop
         - [ ] It should pass the `category` as the `substat` prop
-    - [ ] Inside an element with the `className` of `per-day`, it should:
-      - [ ] Render the text: `"Total Calories Per Day` inside an `h4` element
-      - [ ] For each item in the `totalCaloriesPerDay` array, it should render a `SummaryStat.jsx` component.
+    - [x] Inside an element with the `className` of `per-day`, it should:
+      - [x] Render the text: `"Total Calories Per Day` inside an `h4` element
+      - [x] For each item in the `totalCaloriesPerDay` array, it should render a `SummaryStat.jsx` component.
         - [ ] It should pass the calories **rounded down to the nearest whole number** as the `stat` prop
         - [ ] It should pass the string of `calories` as the `label` prop
         - [ ] It should pass the `date` in the format `dd/mm/yyyy` - example: `07/02/2022` - as the `substat` prop
