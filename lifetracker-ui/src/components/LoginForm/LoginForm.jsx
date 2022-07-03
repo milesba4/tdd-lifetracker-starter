@@ -4,6 +4,7 @@ import {Link } from "react-router-dom";
 import "./LoginForm.css";
 
 export default function LoginForm({loginForm, setLoginForm, handleLoggedIn}) {
+export default function LoginForm({errors, setErrors, loginForm, setLoginForm,isLoggedIn, setIsLoggedIn}) {
   console.log("loginForm=",loginForm)
   function handleOnLoginChange(evt){
     setLoginForm((f) => ({...f, [evt.target.name]: evt.target.value}))
