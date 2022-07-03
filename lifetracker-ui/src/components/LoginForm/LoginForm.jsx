@@ -8,6 +8,8 @@ import axios from "axios";
 
 export default function LoginForm({loginForm, setLoginForm, handleLoggedIn}) {
 export default function LoginForm({errors, setErrors, loginForm, setLoginForm,isLoggedIn, setIsLoggedIn}) {
+  let navigate = useNavigate()
+  // const navigate = useNavigate()
   console.log("loginForm=",loginForm)
   function handleOnLoginChange(evt){
     setLoginForm((f) => ({...f, [evt.target.name]: evt.target.value}))
