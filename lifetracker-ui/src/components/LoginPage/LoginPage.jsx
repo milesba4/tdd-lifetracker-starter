@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./LoginPage.css";
 import LoginForm from "components/LoginForm/LoginForm";
+import ActivityPage from "components/ActivityPage/ActivityPage";
 
 export default function LoginPage({isLoggedIn, setIsLoggedIn, handleLoggedIn, loginForm, setLoginForm}){
     return(
