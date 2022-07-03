@@ -29,9 +29,11 @@ router.post("/register", async(req,res,next)=>{
     try{
         console.log("req body=",req.body)
         const user = await User.register(req.body)
+        console.log("user=", user)
         return res.status(200).json({user})
         }catch(err){
         console.log("hello")
+        console.log(err)
         next(err)
         }
 })
