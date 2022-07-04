@@ -14,7 +14,7 @@ class User {
         }
         static async login(credentials){
         
-            const requiredFeilds = ["username","email", "password", "first_name", "last_name","created_at"]
+            const requiredFeilds = ["email", "password"]
             requiredFeilds.forEach(field=>{
                 if(!credentials.hasOwnProperty(field)){
                 throw new BadRequestError(`Missing ${field} in request body`)
