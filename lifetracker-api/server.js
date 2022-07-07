@@ -7,12 +7,13 @@ const {BadRequestError, NotFoundError} = require("./utils/errors")
 
 
 app.use(cors())
-
 //parse incoming request bodies with JSON payload
 app.use(express.json())
 
 // log request info 
 app.use(morgan("tiny"))
+
+
 
 app.use((err,req,res,next)=>{  // generic error handler
     const status = err.status || 500
