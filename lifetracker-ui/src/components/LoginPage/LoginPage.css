@@ -23,10 +23,10 @@
     font-size: 42px;
     margin-bottom: 4px;
     font-weight: 600;
-    color: white;
+    color: #00c98e;
 }
 
-.login-page .card .login-form, .login-page .card .login-form .input-field {
+.login-page .card .login-form, .login-page .card .login-form .form-input {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -35,26 +35,26 @@
 
 .login-page .card .login-form {
     padding-bottom: 10px;
-    color: white;
+    color: #00c98e;
 }
 
-.login-page .card .login-form .input-field {
+.login-page .card .login-form .form-input {
     margin: 8px 0;
 }
 
-.login-page .card .login-form .input-field label {
+.login-page .card .login-form .form-input label {
     margin-bottom: 5px;
     color: white;
 }
 
-.login-page .card .login-form .input-field input {
+.login-page .card .login-form .form-input input {
     height: 60px;
     padding: 0 15px;
     font-size: 16px;
     border: 1px solid #e4e4e4;
     width: 100%;
     background: transparent;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .login-page .card .footer, .login-page .card .login-form .btn {
@@ -80,7 +80,7 @@
 }
 
 .login-page .card .footer, .login-page .card .footer p, .Navbar {
-    color: white;
+    color: #00c98e;
 }
 
 .login-page .card .footer a {
