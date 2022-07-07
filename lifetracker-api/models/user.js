@@ -37,7 +37,7 @@ class User {
         console.log("cred=", credentials)
         // user should submit email, password
         // if any of these feilds are missing, throw an error
-        const requiredFeilds = ["username","email", "password", "first_name", "last_name","created_at"]
+        const requiredFeilds = ["username","email", "password", "firstName", "lastName"]
         requiredFeilds.forEach(field=>{
             if(!credentials.hasOwnProperty(field)){
             throw new BadRequestError(`Missing ${field} in request body`)
@@ -78,12 +78,11 @@ class User {
             username,
             password,
             first_name,
-            last_name,
-            created_at
+            last_name
             )
-            VALUES ($1, $2, $3, $4, $5, $6)
+            VALUES ($1, $2, $3, $4, $5)
             RETURNING id, email, username, first_name, last_name, created_at;
-        `,[lowercasedEmail,credentials.username, hashedPassword, credentials.first_name, credentials.last_name,credentials.created_at])
+        `,[lowercasedEmail,credentials.username, hashedPassword, credentials.firstName, credentials.lastName])
         
         //return user
         console.log("result =", result)
