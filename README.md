@@ -1,144 +1,72 @@
 # Project #3: LifeTracker Application
 
-## Overview
+# Week 3 Assignment: Life Tracker
 
-> Data is the new oil - Clive Humbly
+Submitted by: **Miles Baffour**
 
-Everywhere around us is data waiting to be collected and utilized. In recent years we've seen the rise of applications and services that exist to quantify concepts that were previously hard to capture. FitBit, Apple Health, and Woop are all $1 billion dollar services to offer tracking statistics about how we live our lives. The LifeTracker app you'll be building will do exactly that - track your life by quantifying your activity.
-
-This application will be built using the battle-tested PERN stack - PostgreSQL, Express, React, and Node.
-
-## Goals
-
-Building this application you will accomplish the following:
-
-- [ ] Develop a full-fledged authentication system using PostgreSQL and Bcrypt
-- [ ] Provide users with an Express API they can interact with to store user-related activity
-- [ ] Construct multiple Models that implement the core business logic associated with tracking users' lives
-- [ ] Write SQL queries that aggregate user statistics and provide summary overviews about their activity
-- [ ] Design a React frontend that interacts with the API using an API service class
-- [ ] Build multiple pages and forms that communicate with the server using HTTP requests
-- [ ] Store user-authenticated JWT tokens in the browser's local storage for persisted authentication
-- [ ] Employ useEffect and useState hooks to manage application state on the frontend
+Deployed Application: [Lifetracker Deployed Site](ADD_LINK_HERE)
 
 ## Application Features
 
-This assignment asks SITE interns to accomplish the following:
+### Core Features
 
-### Frontend
+- [x] **The Nav Bar:** Implement customized views for users who are logged in vs not logged in.
+  - [x] If the user is logged in, it should display a **Sign Out** button. 
+  - [x] If no user is logged in, it should display **Login** and **Register** buttons
+  - [x] Display a logo on the far left side, and contain links to the individual detailed activity page. 
+- [x] **The Landing Page:** Display a large hero image and a brief blurb on what this application is about
+- [x] **Login Page:** A form that allows users to login with email and password.
+- [x] **Registration Page:** A form that allows the user to sign up with their email, password, username, first name, and last name.
+- [ ] When a user first authenticates, they should be redirected to an authenticated view (i.e the detailed activity page). When they sign out, all frontend data should be reset.
+- [x] Users have access to an overview Activity page that show one summary statistic about each of the 3 types of activity tracked.
+- [x] The API should have a `security` middleware that only allows authenticated users to access resources and only allows users to access resources about themselves. 
+- [ ] Users should have the ability to track at least **1** types of activities (i.e Nutrition, Exercise, Sleep, etc.). Each activity should be tracked on separate pages.
+- [ ] Deployed website with Heroku & Surge. 
 
-### React UI
+**Detailed Activity Page:**
+- [ ] The detailed activity page should display a feed of all previous tracked activities.
+- [ ] The detailed activity should contain a form to contain relevant information. (i.e if tracking nutrition this form allows the user to capture calories, timestamp, image, category, etc.) 
+- [ ] The activity tracked should be given a unique id for easy lookup.
+  `TODO://` Add link to table schema in the link code below. Your file should end in `.sql` and show your schema for the detailed activities table. (🚫 Remove this paragraph after adding schema link)
+  * [Table Schema](📝ADD LINK TO TABLE SCHEMA.sql HERE!) 
 
-For the React frontend, Site interns will be building a number of components. Make sure to keep the same component structure as the starter code, as that is how the tests will know where to find each component.
+### Stretch Features
 
-In general, the components directory should resemble:
+Implement any of the following features to improve the application:
+- [ ] Each model (`nutrition`, `exercise`, and `sleep`) should also implement a `fetchById` method that queries the database for a record by its id and only serves it to users who own that resource. Create a new dynamic route on the frontend that displays detail about a single record. For instance, `nutrition/detail/:id` should show a page with all the information about a single nutrition item.
+- [ ] Provide a dropdown that allows users to filter activity based on a certain attribute of any activity item.
+- [ ] Calculate aggregate statistics based on time periods - such as daily, weekly, monthly aggregates.
+- [ ] Create a page that shows all other users that use the life tracker application and allow users to follow each other.
 
-```text
-│
-└── components
-    └── App
-        │
-        ├── Landing
-        │   └── Landing.jsx
-        │   └── Landing.css
+### Walkthrough Video
 
-        ... other components
+![Alt Text](http://g.recordit.co/yRmL2v4vIJ.gif)
 
-        ├── Navbar
-        │   └── Navbar.jsx
-        │   └── Navbar.css
-        ├── NutritionPage
-        │   └── NutritionPage.jsx
-        │   └── NutritionPage.css
+### Reflection
 
-        ... other components
+* Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-```
+Lab 1 was very resourceful in terms of learning how to make SQL queries and the syntax behind them. Lab 2 also was extremely helpful in preparing me to create SQL databases with Postgres and using it in combination with express. I felt unprepared to use tokens for authentication.
 
-> NOTE: Each components should be exported from the file as the `default` export!
+* If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
+  
+If I had more time I would make my website's css look a lot cleaner.(Will work more on it over the weekend).
 
-The components in the `App.jsx` file should render the following components (along with any others that might be needed):
 
-```text
-│
-└── App
-    │
-    ├── Navbar (all routes)
-    │   ├── Logo
-    │   └── NavLinks
-    │
-    ├── LandingPage (the `/` route)
-    ├── LoginPage (the `/login` route)
-    │   └── LoginForm
-    ├── RegistrationPage (the `/register` route)
-    │   └── RegistrationForm
-    │
-    ├── ActivityPage (the `/activity` route)
-    │   ├── SummaryStat
-    │   ├── SummaryStat
-    │   ├── ... as many as needed
-    │   └── SummaryStat
-    │
-    ├── NutritionPage (the `/nutrition` route, which renders more nested routes)
-    │   ├── NutritionOverview (the main component rendered at the `/nutrition` route)
-    │   │   └── NutritionFeed
-    │   │       ├── NutritionCard
-    │   │       ├── NutritionCard
-    │   │       ├── ... as many as needed
-    │   │       ├── NutritionCard
-    │   │       └── NutritionCard
-    │   │
-    │   ├── NutritionNew (rendered at the `/nutrition/create` route)
-    │   │   └── NutritionForm
-    │   │
-    │   ├── NutritionDetail (rendered at the `/nutrition/id/:nutritionId` route)
-    │   │   └── NutritionCard
-    │   │   └── NotFound (only if no `nutrition` with that `nutritionId` exists)
-    │   │
-    │   └── NotFound (all other routes that don't match any of the nested routes)
-    │
-    └── NotFound (all other routes that don't match)
+* Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-```
+I noticed alot of other student's CSS styling looked very clean, which is something I wish I had been able to do before demoing my project.
 
-> **IMPORTANT**:
-> NOTE - Make sure that each component can render without crashing, even when none of the required props are provided! Components will be rigorously tested using only a few props. So, to ensure that all the tests pass, either add default props to components where needed, or check that certain props exist before rendering JSX that depends on them.
+### Open-source libraries used
 
-- To build out the front-end, start with the `App.jsx` component:
+ReactJS(https://reactjs.org/)
 
-  - [ ] **`App.jsx`**
-    - [x] Should be wrapped by an element with the `className` of `app`
-    - [x] The core App component that contains the routes for the app wrapped in Context providers
-    - [x] Renders the `Navbar` component on every route
-    - [ ] Renders a `BrowserRouter` component that contains a `Routes` component with the following routes:
-      - [x] `/` - Should render the `Landing.jsx` component
-      - [x] `/login` - Should render the `LoginPage.jsx` component
-      - [x] `/register` - Should render the `RegistrationPage.jsx` component
-      - [x] `/activity` - Should render the `ActivityPage.jsx` component (only if the user is logged in, otherwise it renders the `AccessForbidden.jsx` component)
-      - [x] `/nutrition/* - should render the `NutritionPage.jsx`component (only if the user is logged in, otherwise it renders the`AccessForbidden.jsx` component)
-      - [ ] `*` - anything else should render the `NotFound` component
-  - [ ] To standarize API requests throughout the application, set up an **`ApiClient`** class
 
-    - [ ] Start by creating a `constants.js` file at the root of the project
-      - [ ] In it, export a few variables:
-      - [ ] `PRODUCTION_API_BASE_URL` - set to whatever url the production API is deployed at
-      - [ ] `DEVELOPMENT_API_BASE_URL` - set to "http://localhost:3001" for development
-      - [ ] `API_BASE_URL` - if `process.env.NODE_ENV` is `production`, set this to `PRODUCTION_API_BASE_URL`, otherwise set it to `DEVELOPMENT_API_BASE_URL`
-    - [ ] Next, create a `services` directory at the root of the project
-    - [ ] Inside that directory, touch an `apiClient.js` file
-    - [ ] In that file, import the `axios` package and the `API_BASE_URL` constant from the `constants.js` file
-    - [ ] Define a new class in that file called `ApiClient`.
-      - [ ] Give it a constructor function that accepts a single parameter - `remoteHostUrl`. The constructor should attach the `remoteHostUrl` parameter to a new instance with `this.remoteHostUrl = remoteHostUrl`. It should also set `this.token = null`.
-      - [ ] Export default a new instance of the `ApiClient` class
-      - [ ] Add an additional method called `setToken` that accepts a single parameter - `token` and attaches it to the instance.
-      - [ ] Create a utility method called `request` that uses `axios` to issue HTTP requests
-      - [ ] Add a `login` method that uses the `request` method to send an HTTP request to the `auth/login` endpoint
-      - [ ] Add a `signup` method that uses the `request` method to send an HTTP request to the `auth/register` endpoint
-      - [ ] Add a `fetchUserFromToken` method that uses the `request` method to send an HTTP request to the `auth/me` endpoint
-      - [ ] **Add as many other methods as needed when making API requests**
+### Shout out
 
-  - [ ] Create an **`auth`** context:
+Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
 
+<<<<<<< HEAD
     - [ ] First, create a `contexts` directory at the root of the project
     - [ ] Inside it, touch the `contexts/auth.jsx` file
     - [ ] In that file, define a new `AuthContext` with `React.createContext`
@@ -801,7 +729,18 @@ Here are the pieces of functionality that should be built out for the backend:
     - [ ] In the `routes/activity.js` file:
       - [ ] Implement the features outlined in the tests until they're all passing
   - [ ] Commit all work to `git`
+=======
+I'd like to shout out Gabrel Bremo and Lacie Covington for being great podmates.
+>>>>>>> 6d59b45fa990c15cc562a36f0d15824214473716
 
 ## Wrapping Up and Resources
 
 This is a huge project and represents a complete application with user-owned resources. Accordingly, it can, should, and will test the limits of your capabilities. Do your best and don't be afraid to Google! Especially in regards to any SQL that might be tricky.
+
+
+
+
+
+
+
+
