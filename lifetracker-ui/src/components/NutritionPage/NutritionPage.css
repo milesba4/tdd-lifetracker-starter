@@ -1,0 +1,6 @@
+.Banner {
+    align-items: center;
+    justify-content: center;
+    background: var(--less-dark-background);
+    height: 120px;
+}
