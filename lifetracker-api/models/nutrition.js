@@ -1,21 +1,18 @@
 const db = require("../db")
-const {BadRequestError,UnauthorizedError, NotFoundError} = require("../utils/errors")
-
-
-
+const {BadRequestError, NotFoundError} = require("../utils/errors")
 
 class Nutrition {
 
-    static async createNutrition({nutrition, user}){
-        const requiredFeilds = ["name","category", "calories", "image_url"]
-                    requiredFeilds.forEach(field=>{
-            if(!credentials.hasOwnProperty(field)){
-            throw new BadRequestError(`Missing ${field} in request body`)
+    static async createNutrition({user, nutrition}){
+        console.log("email=", user)
+        const requiredFields = ["name", "category", "calories", "quantity", "image_url"]
+        console.log("nutr", nutrition)
+        requiredFields.forEach(field => {
+            if (!nutrition.hasOwnProperty(field)) {
+                throw new BadRequestError(`Missing ${field} in request body.`)
             }
-
-
-
-
+        })
+            
             const result = await db.query(
                 `INSERT INTO nutrition(
                     name,
@@ -30,10 +27,10 @@ class Nutrition {
                 `,[nutrition.name, nutrition.category, nutrition.calories, nutrition.quantity, nutrition.image_url, user.email])
 
                 return result.rows[0]
-        })
-}
+        }
 
-static async fetchNutritionById({id}){
+
+static async fetchNutritionById(id){
 
 if(!id){
 throw new NotFoundError(`id not found`)
@@ -43,18 +40,19 @@ throw new NotFoundError(`id not found`)
     `SELECT * FROM nutrition
     WHERE id = $1;`,[id]
     )
+    console.log("result:",result)
     return result.rows[0]
 }
 
 }
 
-static async listNutritionForUser(user) {
+static async listNutritionForUser({user}) {
 
     if (!user) {
         throw new BadRequestError(`No user provided`)
     }
 
-    const results = await db.query(`SELECT * FROM nutrition WHERE user_id = $1`, [user.user_id])
+    const results = await db.query(`SELECT * FROM nutrition WHERE user_id = (SELECT id FROM users WHERE email = $1)`, [user.email])
 
     return results.rows
 }
