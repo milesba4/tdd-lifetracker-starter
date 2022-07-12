@@ -43,7 +43,7 @@ Implement any of the following features to improve the application:
 ![Alt Text](http://g.recordit.co/yRmL2v4vIJ.gif)
 
 #### Record nutrition
-![Alt Text](http://g.recordit.co/B63wSaePwn.gif)
+![Alt Text](http://g.recordit.co/JhWsEGNnot.gif)
 
 ### Reflection
 
