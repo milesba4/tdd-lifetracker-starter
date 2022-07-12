@@ -4,7 +4,7 @@
 
 Submitted by: **Miles Baffour**
 
-Deployed Application: [Lifetracker Deployed Site](https://milesba4-lifetracker-app.surge.sh/)
+Deployed Application: [Lifetracker Deployed Site](https://milesba4-lifetracker-api.surge.sh/)
 
 ## Application Features
 
